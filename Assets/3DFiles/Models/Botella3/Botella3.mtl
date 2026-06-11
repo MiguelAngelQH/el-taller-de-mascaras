@@ -1,0 +1,67 @@
+# Exported from Nomad Sculpt
+
+newmtl Corcho
+ map_Kd Corcho_color.png
+ map_roughness Corcho_roughness.png
+ map_Pr Corcho_roughness.png
+ map_metallic Corcho_metalness.png
+ map_Pm Corcho_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Botella
+ map_Kd Botella_color.png
+ map_roughness Botella_roughness.png
+ map_Pr Botella_roughness.png
+ map_metallic Botella_metalness.png
+ map_Pm Botella_metalness.png
+ map_d Botella_opacity.png
+ d 0.544000
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Agua
+ map_Kd Agua_color_1.png
+ map_roughness Agua_roughness_1.png
+ map_Pr Agua_roughness_1.png
+ map_metallic Agua_metalness_1.png
+ map_Pm Agua_metalness_1.png
+ map_d Agua_opacity_1.png
+ d 0.644000
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Lentes
+ map_Kd Lentes_color.png
+ map_roughness Lentes_roughness.png
+ map_Pr Lentes_roughness.png
+ map_metallic Lentes_metalness.png
+ map_Pm Lentes_metalness.png
+ map_d Lentes_opacity.png
+ d 0.776000
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Torus_1
+ map_Kd Armazon_color.png
+ map_roughness Armazon_roughness.png
+ map_Pr Armazon_roughness.png
+ map_metallic Armazon_metalness.png
+ map_Pm Armazon_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Mirror
+ map_Kd Calaveras_color.png
+ map_roughness Calaveras_roughness.png
+ map_Pr Calaveras_roughness.png
+ map_metallic Calaveras_metalness.png
+ map_Pm Calaveras_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000

@@ -1,0 +1,31 @@
+# Exported from Nomad Sculpt
+
+newmtl Cylinder_ext_1
+ map_Kd Cylinder_ext_2_color.png
+ map_roughness Cylinder_ext_2_roughness.png
+ map_Pr Cylinder_ext_2_roughness.png
+ map_metallic Cylinder_ext_2_metalness.png
+ map_Pm Cylinder_ext_2_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Plane_ext
+ map_Kd Plane_ext_Plane_ext_color.png
+ map_roughness Plane_ext_Plane_ext_roughness.png
+ map_Pr Plane_ext_Plane_ext_roughness.png
+ map_metallic Plane_ext_Plane_ext_metalness.png
+ map_Pm Plane_ext_Plane_ext_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Cylinder_ext
+ map_Kd Cylinder_ext_Cylinder_ext_2_color.png
+ map_roughness Cylinder_ext_Cylinder_ext_2_roughness.png
+ map_Pr Cylinder_ext_Cylinder_ext_2_roughness.png
+ map_metallic Cylinder_ext_Cylinder_ext_2_metalness.png
+ map_Pm Cylinder_ext_Cylinder_ext_2_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000

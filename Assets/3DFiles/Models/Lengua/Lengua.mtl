@@ -1,0 +1,21 @@
+# Exported from Nomad Sculpt
+
+newmtl Plane_ext_1
+ map_Kd Algas_color.png
+ map_roughness Algas_roughness.png
+ map_Pr Algas_roughness.png
+ map_metallic Algas_metalness.png
+ map_Pm Algas_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Tube
+ map_Kd Lengua_color.png
+ map_roughness Lengua_roughness.png
+ map_Pr Lengua_roughness.png
+ map_metallic Lengua_metalness.png
+ map_Pm Lengua_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000

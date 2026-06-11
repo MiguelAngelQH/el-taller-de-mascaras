@@ -1,0 +1,258 @@
+[gd_scene format=3 uid="uid://duxs2pq4d7oe0"]
+
+[ext_resource type="Script" uid="uid://7iuj3u7ddten" path="res://Objects/Scripts/Assets/inventory_panel.gd" id="1_2c31v"]
+[ext_resource type="Script" uid="uid://vo023fc7smka" path="res://Objects/Scripts/Assets/item_slot.gd" id="1_eegqa"]
+
+[node name="CanvasInventory" type="CanvasLayer" unique_id=654066164]
+
+[node name="Inventory" type="Panel" parent="." unique_id=211777397]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -105.000015
+offset_right = -212.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(13.221516, 5.2176156)
+size_flags_horizontal = 4
+script = ExtResource("1_2c31v")
+
+[node name="MarginContainer" type="MarginContainer" parent="Inventory" unique_id=1430347859]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.011802673
+anchor_top = 0.6560919
+anchor_right = 1.3618027
+anchor_bottom = 2.0060925
+offset_top = -25.0
+offset_right = 266.0
+offset_bottom = 25.0
+grow_vertical = 2
+scale = Vector2(0.122774675, 0.358108)
+
+[node name="InventoryGridContainer" type="GridContainer" parent="Inventory/MarginContainer" unique_id=54380584]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+columns = 6
+
+[node name="ItemSlot3" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=1125364650]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot3" unique_id=476262258]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot4" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=526451696]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot4" unique_id=1049700741]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot5" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=544820618]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot5" unique_id=1944817996]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot6" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=598841888]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot6" unique_id=2127527491]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot7" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=2006244612]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot7" unique_id=1768501054]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot8" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=828784074]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot8" unique_id=1849151828]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot9" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=2016753418]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot9" unique_id=185504468]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot10" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=1780888252]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot10" unique_id=1318470208]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot11" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=686329548]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot11" unique_id=1699622510]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot12" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=1334926555]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot12" unique_id=1453506690]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot13" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=1029606037]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot13" unique_id=202608095]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot14" type="Panel" parent="Inventory/MarginContainer/InventoryGridContainer" unique_id=1856479734]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_eegqa")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/InventoryGridContainer/ItemSlot14" unique_id=19236847]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5

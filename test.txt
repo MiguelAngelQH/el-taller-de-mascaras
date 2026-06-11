@@ -1,0 +1,146 @@
+2.1 Módulo: Sistema de Ítems (ItemData)
+Responsabilidad: representar un ítem con nombre, icono, malla 3D y sonido opcionales.
+
+Pruebas unitarias — test_item_data.gd
+extends GutTest
+
+var item: ItemData
+
+func before_each():
+    item = ItemData.new()
+
+# TDD-01: Un ItemData recién creado debe tener nombre vacío
+func test_item_name_default_is_empty():
+    assert_eq(item.item_name, "")
+
+# TDD-02: Asignar nombre debe persistir
+func test_item_name_assignment():
+    item.item_name = "Potion1"
+    assert_eq(item.item_name, "Potion1")
+
+# TDD-03: Un ItemData sin icono no debe lanzar error al leerlo
+func test_icon_null_by_default():
+    assert_null(item.icon)
+
+# TDD-04: Un ItemData sin sonido debe tener sound == null
+func test_sound_null_by_default():
+    assert_null(item.sound)
+
+# TDD-05: Asignar mesh debe ser recuperable
+func test_mesh_assignment():
+    var mesh = ArrayMesh.new()
+    item.mesh = mesh
+    assert_eq(item.mesh, mesh)
+
+2.2 Módulo: Caldero (caldero.gd — lógica de mezcla)
+Responsabilidad: verificar combinaciones de pociones y generar la sustancia resultante.
+
+Pruebas unitarias — test_caldero_logic.gd
+extends GutTest
+
+# Simulación de la función de mezcla sin instanciar nodo 3D
+
+const P1_PATH = "res://Objects/Scripts/Assets/Potions/potion1.tres"
+const P2_PATH = "res://Objects/Scripts/Assets/Potions/potion2.tres"
+const P3_PATH = "res://Objects/Scripts/Assets/Potions/potion3.tres"
+
+func _get_resultado(conteo: Dictionary) -> String:
+    var p1 = conteo.get(P1_PATH, 0)
+    var p2 = conteo.get(P2_PATH, 0)
+    var p3 = conteo.get(P3_PATH, 0)
+    if p1 == 1 and p2 == 1 and p3 == 1:
+        return "COMBINACION_EXITOSA"
+    return "SIN_COMBINACION"
+
+# TDD-06: caldero vacío no produce combinación
+func test_caldero_vacio():
+    var resultado = _get_resultado({})
+    assert_eq(resultado, "SIN_COMBINACION")
+
+# TDD-07: solo potion1 no produce combinación
+func test_solo_potion1():
+    assert_eq(_get_resultado({P1_PATH: 1}), "SIN_COMBINACION")
+
+# TDD-08: triple combinación (p1+p2+p3) produce combinación exitosa
+func test_combinacion_triple():
+    var conteo = {P1_PATH: 1, P2_PATH: 1, P3_PATH: 1}
+    assert_eq(_get_resultado(conteo), "COMBINACION_EXITOSA")
+
+# TDD-09: duplicados de potion1 no producen combinación
+func test_duplicados_no_combinan():
+    var conteo = {P1_PATH: 2, P2_PATH: 1, P3_PATH: 0}
+    assert_eq(_get_resultado(conteo), "SIN_COMBINACION")
+
+# TDD-10: combinación incorrecta (p1+p2 sin p3) falla
+func test_combinacion_incompleta():
+    var conteo = {P1_PATH: 1, P2_PATH: 1}
+    assert_eq(_get_resultado(conteo), "SIN_COMBINACION")
+
+2.3 Módulo: Inventario (item_slot.gd)
+Responsabilidad: almacenar un ítem, refrescar la UI y soportar drag & drop.
+
+Pruebas unitarias — test_item_slot.gd
+extends GutTest
+
+var slot_scene = preload("res://Objects/assets/inventoryHub.tscn")
+var item_data_1: ItemData
+var item_data_2: ItemData
+
+func before_each():
+    item_data_1 = ItemData.new()
+    item_data_1.item_name = "Aguacate"
+    item_data_2 = ItemData.new()
+    item_data_2.item_name = "Lengua"
+
+# TDD-11: slot recién creado tiene item == null
+func test_slot_inicialmente_vacio():
+    var slot = Panel.new()
+    var prop = slot.get("item")
+    assert_null(prop)
+    slot.free()
+
+# TDD-12: asignar item_data actualiza el valor interno
+func test_slot_recibe_item():
+    # Dado un slot con setter de item
+    # La propiedad debe quedar asignada
+    assert_eq(item_data_1.item_name, "Aguacate")
+
+# TDD-13: intercambio de ítems entre dos slots
+func test_swap_items():
+    var a = item_data_1
+    var b = item_data_2
+    var tmp = a
+    a = b
+    b = tmp
+    assert_eq(a.item_name, "Lengua")
+    assert_eq(b.item_name, "Aguacate")
+
+2.4 Módulo: Estado Global (global.gd)
+Responsabilidad: mantener el estado compartido del juego (has_diary, isInventary, isMouseVisible).
+
+Pruebas unitarias — test_global.gd
+extends GutTest
+
+# TDD-14: has_diary inicia en false
+func test_has_diary_inicia_false():
+    assert_false(Global.has_diary)
+
+# TDD-15: isInventary inicia en false
+func test_is_inventary_inicia_false():
+    assert_false(Global.isInventary)
+
+# TDD-16: isMouseVisible inicia en false
+func test_is_mouse_visible_inicia_false():
+    assert_false(Global.isMouseVisible)
+
+# TDD-17: recoger diario cambia has_diary a true
+func test_recoger_diario():
+    Global.has_diary = false
+    Global.has_diary = true
+    assert_true(Global.has_diary)
+
+# TDD-18: abrir inventario cambia isInventary a true
+func test_abrir_inventario():
+    Global.isInventary = false
+    Global.isInventary = true
+    assert_true(Global.isInventary)

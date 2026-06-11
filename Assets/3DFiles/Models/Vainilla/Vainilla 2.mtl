@@ -1,0 +1,31 @@
+# Exported from Nomad Sculpt
+
+newmtl Flor
+ map_Kd Flor_Flor_color.png
+ map_roughness Flor_Flor_roughness.png
+ map_Pr Flor_Flor_roughness.png
+ map_metallic Flor_Flor_metalness.png
+ map_Pm Flor_Flor_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Tube
+ map_Kd Tube_Tube_color.png
+ map_roughness Tube_Tube_roughness.png
+ map_Pr Tube_Tube_roughness.png
+ map_metallic Tube_Tube_metalness.png
+ map_Pm Tube_Tube_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Hoja
+ map_Kd Hoja_Hoja_color.png
+ map_roughness Hoja_Hoja_roughness.png
+ map_Pr Hoja_Hoja_roughness.png
+ map_metallic Hoja_Hoja_metalness.png
+ map_Pm Hoja_Hoja_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000

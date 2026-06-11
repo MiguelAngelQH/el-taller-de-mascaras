@@ -1,0 +1,31 @@
+# Exported from Nomad Sculpt
+
+newmtl Cascara
+ map_Kd Cascara_Cascara_color.png
+ map_roughness Cascara_Cascara_roughness.png
+ map_Pr Cascara_Cascara_roughness.png
+ map_metallic Cascara_Cascara_metalness.png
+ map_Pm Cascara_Cascara_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl lambert6SG
+ map_Kd Plumas_lambert6SG_color.png
+ map_roughness Plumas_lambert6SG_roughness.png
+ map_Pr Plumas_lambert6SG_roughness.png
+ map_metallic Plumas_lambert6SG_metalness.png
+ map_Pm Plumas_lambert6SG_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Coco
+ map_Kd Coco_Coco_color.png
+ map_roughness Coco_Coco_roughness.png
+ map_Pr Coco_Coco_roughness.png
+ map_metallic Coco_Coco_metalness.png
+ map_Pm Coco_Coco_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000

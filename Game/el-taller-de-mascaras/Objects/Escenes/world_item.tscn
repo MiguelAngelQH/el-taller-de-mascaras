@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d06616oqh27ou"]
+
+[ext_resource type="Script" uid="uid://bxv5whesmedtp" path="res://Objects/Scripts/Assets/Potions/world_potion_item.gd" id="1_jng3r"]
+[ext_resource type="ArrayMesh" uid="uid://cgv66ichgog7r" path="res://Objects/assets/Models/Potions/kasane_teto_fatass_plush.obj" id="2_jng3r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jng3r"]
+size = Vector3(1.7221797, 2.7370758, 2.1579285)
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=1955460327]
+transform = Transform3D(0.26844722, 0, 0, 0, 0.26844722, 0, 0, 0, 0.26844722, 0, 0.123352885, 0)
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("1_jng3r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2072057834]
+transform = Transform3D(0.183089, 0, 0, 0, 0.183089, 0, 0, 0, 0.183089, 0, 0, 0)
+layers = 9
+mesh = ExtResource("2_jng3r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1637140568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014348836, 1.3175886, 0.10114992)
+shape = SubResource("BoxShape3D_jng3r")
+
+[node name="ItemSound" type="AudioStreamPlayer" parent="." unique_id=2072005907]
+volume_db = -3.104

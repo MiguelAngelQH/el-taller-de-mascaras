@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cs2y311iaooma"]
+
+[ext_resource type="Script" uid="uid://du54b2hworv7r" path="res://Objects/Scripts/Assets/diary.gd" id="1_p6e44"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dar4j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dar4j"]
+albedo_color = Color(0.16514456, 0.00015743569, 0.490956, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dar4j"]
+size = Vector3(0.57611084, 0.037597656, 1)
+
+[node name="Diary" type="StaticBody3D" unique_id=465139093]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_p6e44")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1053080185]
+transform = Transform3D(0.5783351, 0, 0, 0, 0.038288098, 0, 0, 0, 1, 0, 0, 0)
+layers = 8
+mesh = SubResource("BoxMesh_dar4j")
+surface_material_override/0 = SubResource("StandardMaterial3D_dar4j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1496193574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1552734e-05, 0, 0)
+shape = SubResource("BoxShape3D_dar4j")

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://jfl3g2mq820l"]
+
+[ext_resource type="PackedScene" uid="uid://c5ewul0fttwhu" path="res://Objects/assets/Models/Caldero/caldero.glb" id="1_bpk28"]
+[ext_resource type="Script" uid="uid://b8hm328nq0y7p" path="res://Objects/Scripts/Assets/Caldero/caldero.gd" id="1_ebp4b"]
+[ext_resource type="PackedScene" uid="uid://fsc8a44w1lee" path="res://Objects/assets/caldero/caldero_viewport.tscn" id="3_l8otv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bpk28"]
+size = Vector3(5849.155, 0.28045654, 1.1398926)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebp4b"]
+size = Vector3(907.13794, 1.0991211, 0.9927063)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l8otv"]
+size = Vector3(4269.996, 1.1081543, 0.19970703)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_62fne"]
+size = Vector3(3962.1394, 0.23175049, 0.77599335)
+
+[node name="caldero" type="StaticBody3D" unique_id=1938278463]
+transform = Transform3D(-0.0002975528, 0, 0, 0, 1.4043366, 0, 0, 0, 1.5124713, 0, 0, 0)
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("1_ebp4b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1704443758]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -6.175781, 0.0021026183, 0)
+gi_mode = 2
+gi_lightmap_texel_scale = 5.0553
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1915911758]
+transform = Transform3D(1.3166866, 0, 0, 0, 1.3167518, 0, 0, 0, 1.3166866, -129.30324, 0.15943843, -0.03198494)
+shape = SubResource("BoxShape3D_bpk28")
+
+[node name="Sketchfab_Scene" parent="." unique_id=1882834697 instance=ExtResource("1_bpk28")]
+transform = Transform3D(-18.674788, 0, 0, 0, 0.0039568427, 0, 0, 0, 0.003673942, -110.22572, 0, -0.040527582)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1379084542]
+transform = Transform3D(1, 0, 0, 0, 1.0000621, 0, 0, 0, 1, -2135.8948, 0.7974284, -0.07435608)
+shape = SubResource("BoxShape3D_ebp4b")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=850626373]
+transform = Transform3D(1, 0, 0, 0, 1.0000625, 0, 0, 0, 1, 2058.204, 0.7974286, -0.07435608)
+shape = SubResource("BoxShape3D_ebp4b")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=708249225]
+transform = Transform3D(1, 0, 0, 0, 1.0000726, 0, 0, 0, 1, -137.53969, 0.7469261, 0.40014648)
+shape = SubResource("BoxShape3D_l8otv")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=1041515681]
+transform = Transform3D(1, 0, 0, 0, 1.0000728, 0, 0, 0, 1, -137.53969, 0.7469263, -0.5409935)
+shape = SubResource("BoxShape3D_l8otv")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=91590565]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -115.31754, 0.68811464, -0.04419184)
+shape = SubResource("BoxShape3D_62fne")
+debug_color = Color(0.8306589, 0.0014391094, 0.9451167, 0.41960785)
+
+[node name="CalderoSeeCast" type="RayCast3D" parent="CollisionShape3D6" unique_id=501960234]
+unique_name_in_owner = true
+transform = Transform3D(-10.567092, 0, 0, 0, -0.3354937, 0, 0, 0, -5.7867928, 35.705475, 0.115657926, 0.04705957)
+collision_mask = 8
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=777852424]
+transform = Transform3D(1, 0, 0, 0, 0.49895146, 0, 0, 0, 1, -357.19266, 1.6714027, 1.1649193)
+
+[node name="CalderoViewport" parent="RigidBody3D" unique_id=1167881026 instance=ExtResource("3_l8otv")]

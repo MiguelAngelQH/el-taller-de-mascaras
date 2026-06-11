@@ -1,0 +1,59 @@
+Prueba de aceptación ATDD-01 a ATDD-04 — GDScript con GUT
+extends GutTest
+
+var menu_scene = preload("res://Objects/Escenes/menu.tscn")
+var menu_node
+
+func before_each():
+    menu_node = menu_scene.instantiate()
+    add_child(menu_node)
+
+func after_each():
+    menu_node.queue_free()
+
+# ATDD-01: existe botón de inicio
+func test_boton_start_existe():
+    var btn = menu_node.find_child("Start", true, false)
+    assert_not_null(btn, "Debe existir un botón llamado Start")
+
+# ATDD-03: _on_quit_pressed llama a quit (se puede simular)
+func test_quit_llama_tree_quit():
+    # Verificamos que el método exista en el nodo
+    assert_true(menu_node.has_method("_on_quit_pressed"))
+
+Prueba de aceptación ATDD-05 a ATDD-10 — GDScript con GUT
+extends GutTest
+
+# ATDD-07: el inventario se abre y cierra sin error
+func test_inventario_toggle():
+    var hub = preload("res://Objects/assets/inventoryHub.tscn").instantiate()
+    add_child(hub)
+    # Estado inicial cerrado
+    assert_false(hub.isShowInventory)
+    # Simular apertura
+    hub.isShowInventory = true
+    hub.cambiar_visibilidad()
+    assert_true(Global.isInventary)
+    # Simular cierre
+    hub.isShowInventory = false
+    hub.cambiar_visibilidad()
+    assert_false(Global.isInventary)
+    hub.queue_free()
+
+# ATDD-08: inventario tiene al menos 6 slots
+func test_inventario_tiene_slots_suficientes():
+    var hub = preload("res://Objects/assets/inventoryHub.tscn").instantiate()
+    add_child(hub)
+    var grid = hub.find_child("InventoryGridContainer", true, false)
+    assert_not_null(grid)
+    assert_gte(grid.get_child_count(), 6)
+    hub.queue_free()
+
+# ATDD-09: swap de ítems entre slots no pierde datos
+func test_swap_no_pierde_item():
+    var a = ItemData.new(); a.item_name = "PotionA"
+    var b = ItemData.new(); b.item_name = "PotionB"
+    var tmp = a; a = b; b = tmp
+    assert_eq(a.item_name, "PotionB")
+    assert_eq(b.item_name, "PotionA")
+

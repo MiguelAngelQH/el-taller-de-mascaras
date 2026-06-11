@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bbjpl8oidj17h"]
+
+[ext_resource type="Script" uid="uid://ctyjcwk8877l3" path="res://Objects/Scripts/item_data.gd" id="1_1ff0e"]
+[ext_resource type="Texture2D" uid="uid://c3x1qk0uqo6wn" path="res://Objects/assets/HudInstruct.png" id="1_hc57o"]
+[ext_resource type="ArrayMesh" uid="uid://bocvsintkj5g0" path="res://Objects/assets/Models/Potions/GenericPotion.obj" id="2_e7in2"]
+
+[resource]
+script = ExtResource("1_1ff0e")
+item_name = "Potion 5"
+icon = ExtResource("1_hc57o")
+mesh = ExtResource("2_e7in2")
+metadata/_custom_type_script = "uid://ctyjcwk8877l3"

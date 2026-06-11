@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cytm6wc7mkowg"]
+
+[ext_resource type="Texture2D" uid="uid://c3x1qk0uqo6wn" path="res://Objects/assets/HudInstruct.png" id="1_8vhsu"]
+[ext_resource type="Script" uid="uid://c1h58recxvvan" path="res://Objects/Scripts/Assets/hud_instructions.gd" id="1_dgr8m"]
+
+[node name="CanvasInstructions" type="CanvasLayer" unique_id=857366253]
+script = ExtResource("1_dgr8m")
+
+[node name="Hud" type="BoxContainer" parent="." unique_id=666109162]
+offset_left = 277.0
+offset_top = 68.0
+offset_right = 317.0
+offset_bottom = 108.0
+scale = Vector2(1.1785407, 1.1103194)
+
+[node name="HudInstruct" type="Sprite2D" parent="Hud" unique_id=808706117]
+position = Vector2(237, 215)
+texture = ExtResource("1_8vhsu")

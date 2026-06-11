@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bhslgly470agh"]
+
+[ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/chiboloNepo.tscn" id="1_bn5u7"]
+[ext_resource type="Script" uid="uid://dctx2j7mgagvf" path="res://Objects/Scripts/Escenes/mainEscene.gd" id="1_kmffk"]
+[ext_resource type="PackedScene" uid="uid://cs2y311iaooma" path="res://Objects/assets/diary.tscn" id="3_vkyet"]
+[ext_resource type="Script" uid="uid://dbxh7h3i5vghm" path="res://Objects/Scripts/Assets/Potions/world_drop.gd" id="4_hytto"]
+[ext_resource type="PackedScene" uid="uid://d06616oqh27ou" path="res://Objects/Escenes/world_item.tscn" id="5_ho8ui"]
+[ext_resource type="Resource" uid="uid://b1f3javfp8xbu" path="res://Objects/Scripts/Assets/Potions/potion1.tres" id="6_aknbo"]
+[ext_resource type="Resource" uid="uid://dh3dydavlxa53" path="res://Objects/Scripts/Assets/Potions/potion2.tres" id="7_1etey"]
+
+[sub_resource type="Environment" id="Environment_vkyet"]
+background_energy_multiplier = 12.04
+ambient_light_color = Color(0.7372549, 0.21960784, 0.2901961, 1)
+ambient_light_energy = 5.29
+glow_enabled = true
+glow_intensity = 0.22
+glow_hdr_threshold = 0.75
+glow_hdr_scale = 0.47
+glow_hdr_luminance_cap = 2.14
+
+[sub_resource type="BoxMesh" id="BoxMesh_bn5u7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kmffk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tkel"]
+transparency = 4
+depth_draw_mode = 1
+albedo_color = Color(1, 0.3254902, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vkyet"]
+material = SubResource("StandardMaterial3D_1tkel")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vkyet"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" unique_id=1638862825]
+environment = SubResource("Environment_vkyet")
+script = ExtResource("1_kmffk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1962155530]
+transform = Transform3D(17.908215, 0, 0, 0, 0.99999994, 0, 0, 0, 12.312729, 0, 0, 0)
+mesh = SubResource("BoxMesh_bn5u7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1125373931]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1978729148]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0)
+shape = SubResource("BoxShape3D_kmffk")
+
+[node name="Character" parent="." unique_id=241886524 instance=ExtResource("1_bn5u7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.849843, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1193195337]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=970930310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.175781, 0.17580163, 0)
+gi_mode = 2
+gi_lightmap_texel_scale = 5.0553
+mesh = SubResource("CylinderMesh_vkyet")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=596060584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1557145, 0.1733625, 0)
+shape = SubResource("CylinderShape3D_vkyet")
+
+[node name="Diary" parent="." unique_id=465139093 instance=ExtResource("3_vkyet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0975256, 1.2043917, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1816548566]
+
+[node name="WorldDropArea" type="Control" parent="." unique_id=2044418444]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_hytto")
+
+[node name="RigidBody3D" parent="." unique_id=1955460327 instance=ExtResource("5_ho8ui")]
+transform = Transform3D(-0.17898466, 0, 0.20007099, 0, 0.26844722, 0, -0.20007099, 0, -0.17898466, -5.4943123, 0.5260811, 2.519903)
+item_data = ExtResource("6_aknbo")
+
+[node name="RigidBody3D2" parent="." unique_id=397216034 instance=ExtResource("5_ho8ui")]
+transform = Transform3D(-0.24562028, 0, -0.108326316, 0, 0.26844722, 0, 0.108326316, 0, -0.24562028, -3.2025094, 0.5260811, 2.519903)
+item_data = ExtResource("7_1etey")
+
+[node name="RigidBody3D3" parent="." unique_id=611338652 instance=ExtResource("5_ho8ui")]
+transform = Transform3D(0.1963778, 0, 0.18302912, 0, 0.26844722, 0, -0.18302912, 0, 0.1963778, -4.7185793, 0.5260811, -3.5058777)
+item_data = ExtResource("7_1etey")

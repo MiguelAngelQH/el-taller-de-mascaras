@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://liiu2fahpt5h"]
+
+[ext_resource type="Script" uid="uid://ctyjcwk8877l3" path="res://Objects/Scripts/item_data.gd" id="1_jlpxu"]
+[ext_resource type="Texture2D" uid="uid://dlcpc2giufob" path="res://Objects/assets/Icons/potion6.png" id="1_yxbli"]
+[ext_resource type="ArrayMesh" uid="uid://cgv66ichgog7r" path="res://Objects/assets/Models/Potions/kasane_teto_fatass_plush.obj" id="2_gll7y"]
+
+[resource]
+script = ExtResource("1_jlpxu")
+item_name = "Potion 6"
+icon = ExtResource("1_yxbli")
+mesh = ExtResource("2_gll7y")
+metadata/_custom_type_script = "uid://ctyjcwk8877l3"

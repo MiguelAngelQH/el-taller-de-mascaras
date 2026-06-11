@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://fsc8a44w1lee"]
+
+[ext_resource type="PackedScene" uid="uid://djp5jj5ifwaoq" path="res://Objects/assets/Models/Caldero/caldero_canva.tscn" id="1_a1swd"]
+
+[node name="CalderoViewport" type="SubViewport" unique_id=1167881026]
+
+[node name="CalderoCanva" parent="." unique_id=1896435287 instance=ExtResource("1_a1swd")]

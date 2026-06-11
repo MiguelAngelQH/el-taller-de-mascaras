@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://tnqngowfduld"]
+
+[ext_resource type="PackedScene" uid="uid://bqd43rh0tolka" path="res://Objects/assets/caldero/caldero_inventary.tscn" id="1_08ycc"]
+[ext_resource type="PackedScene" uid="uid://jfl3g2mq820l" path="res://Objects/assets/Models/caldero.tscn" id="2_xg2qh"]
+[ext_resource type="Script" uid="uid://b5htfwxxvjtml" path="res://Objects/Scripts/Assets/Caldero/caldero_area_base.gd" id="3_xg2qh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_08ycc"]
+size = Vector3(0.63916016, 0.21313477, 0.5917969)
+
+[node name="Node3D" type="Node3D" unique_id=857613492]
+
+[node name="InventaryCaldero" parent="." unique_id=2112374723 instance=ExtResource("1_08ycc")]
+transform = Transform3D(-0.05078471, 0, -0.9987096, 0, 1, 0, 0.9987096, 0, -0.05078471, -0.056394577, 4.040382, 0)
+
+[node name="caldero" parent="." unique_id=1938278463 instance=ExtResource("2_xg2qh")]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=179111397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.696744, 0)
+script = ExtResource("3_xg2qh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=421965083]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08862305, -4.5354443, -0.1015625)
+shape = SubResource("BoxShape3D_08ycc")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

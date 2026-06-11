@@ -1,0 +1,56 @@
+# Exported from Nomad Sculpt
+
+newmtl Burbujas2
+ map_Kd Burbujas2_color.png
+ map_roughness Burbujas2_roughness.png
+ map_Pr Burbujas2_roughness.png
+ map_metallic Burbujas2_metalness.png
+ map_Pm Burbujas2_metalness.png
+ map_d Burbujas2_opacity.png
+ Kd 0.132648 0.222777 0.044968
+ Pr 0.367424
+ Pm 0.030567
+
+newmtl Plumas2
+ map_Kd Tube_color_5.png
+ map_roughness Tube_roughness_5.png
+ map_Pr Tube_roughness_5.png
+ map_metallic Tube_metalness_5.png
+ map_Pm Tube_metalness_5.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Botella2
+ map_Kd Botella_color_3.png
+ map_roughness Botella_roughness_3.png
+ map_Pr Botella_roughness_3.png
+ map_metallic Botella_metalness_3.png
+ map_Pm Botella_metalness_3.png
+ map_d Botella_opacity_3.png
+ d 0.413000
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Agua2
+ map_Kd Agua_roja_color_3.png
+ map_roughness Agua_roja_roughness_3.png
+ map_Pr Agua_roja_roughness_3.png
+ map_metallic Agua_roja_metalness_3.png
+ map_Pm Agua_roja_metalness_3.png
+ map_d Agua_roja_opacity_3.png
+ d 0.679000
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Corcho2
+ map_Kd Botella1_obj/Cylinder-color.png
+ map_roughness Botella1_obj/Cylinder-roughness.png
+ map_Pr Botella1_obj/Cylinder-roughness.png
+ map_metallic Botella1_obj/Cylinder-metallic.png
+ map_Pm Botella1_obj/Cylinder-metallic.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000

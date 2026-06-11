@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bkhqck3y0gsbs"]
+
+[ext_resource type="Script" uid="uid://ctyjcwk8877l3" path="res://Objects/Scripts/item_data.gd" id="1_dj08t"]
+[ext_resource type="Texture2D" uid="uid://poejl34y6mrb" path="res://Objects/assets/Icons/hand_cursor.png" id="1_jfefc"]
+[ext_resource type="ArrayMesh" uid="uid://cgv66ichgog7r" path="res://Objects/assets/Models/Potions/kasane_teto_fatass_plush.obj" id="2_jwn34"]
+[ext_resource type="AudioStream" uid="uid://lpooadnbcayp" path="res://Objects/assets/Sound/Teto.mp3" id="4_jwn34"]
+
+[resource]
+script = ExtResource("1_dj08t")
+item_name = "Substance 1"
+icon = ExtResource("1_jfefc")
+mesh = ExtResource("2_jwn34")
+sound = ExtResource("4_jwn34")
+metadata/_custom_type_script = "uid://ctyjcwk8877l3"

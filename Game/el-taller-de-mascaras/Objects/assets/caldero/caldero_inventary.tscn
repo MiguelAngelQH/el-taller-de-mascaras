@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://bqd43rh0tolka"]
+
+[ext_resource type="Script" uid="uid://iwuh5mqxxfwo" path="res://Objects/Scripts/Assets/Caldero/caldero_inventory.gd" id="1_tbni0"]
+[ext_resource type="Script" uid="uid://vo023fc7smka" path="res://Objects/Scripts/Assets/item_slot.gd" id="2_tq3k0"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tq3k0"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frxeq"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_tq3k0")
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8o0bp"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_frxeq")
+subdivide_width = 2
+subdivide_height = 2
+subdivide_depth = 2
+
+[node name="InventaryCaldero" type="StaticBody3D" unique_id=2112374723]
+collision_layer = 9
+collision_mask = 9
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1186177976]
+transform = Transform3D(2.221903, 0, 0, 0, 0.9839024, 0, 0, 0, 1.0129688, 0, 0, 0)
+mesh = SubResource("BoxMesh_8o0bp")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=2004726109]
+
+[node name="Inventory" type="Panel" parent="SubViewport" unique_id=213103826]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -145.99998
+offset_right = -248.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(17.375664, 7.600112)
+size_flags_horizontal = 4
+script = ExtResource("1_tbni0")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewport/Inventory" unique_id=2114558793]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.011802673
+anchor_top = 0.6560919
+anchor_right = 1.3618027
+anchor_bottom = 2.0060925
+offset_top = -25.0
+offset_right = 266.0
+offset_bottom = 25.0
+grow_vertical = 2
+scale = Vector2(0.122774675, 0.358108)
+
+[node name="InventoryCalderoGridContainer" type="GridContainer" parent="SubViewport/Inventory/MarginContainer" unique_id=2050782652]
+layout_mode = 2
+columns = 3
+
+[node name="ItemSlot3" type="Panel" parent="SubViewport/Inventory/MarginContainer/InventoryCalderoGridContainer" unique_id=650231721]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_tq3k0")
+
+[node name="Icon" type="TextureRect" parent="SubViewport/Inventory/MarginContainer/InventoryCalderoGridContainer/ItemSlot3" unique_id=365047912]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot4" type="Panel" parent="SubViewport/Inventory/MarginContainer/InventoryCalderoGridContainer" unique_id=612461858]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_tq3k0")
+
+[node name="Icon" type="TextureRect" parent="SubViewport/Inventory/MarginContainer/InventoryCalderoGridContainer/ItemSlot4" unique_id=707815788]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot5" type="Panel" parent="SubViewport/Inventory/MarginContainer/InventoryCalderoGridContainer" unique_id=1273786090]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_tq3k0")
+
+[node name="Icon" type="TextureRect" parent="SubViewport/Inventory/MarginContainer/InventoryCalderoGridContainer/ItemSlot5" unique_id=899772316]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09886261
+anchor_top = 0.13409656
+anchor_right = 1.0988624
+anchor_bottom = 1.1340964
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7886283, 0.72861433)
+expand_mode = 1
+stretch_mode = 5

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b7soby52eo22"]
+
+[ext_resource type="Texture2D" uid="uid://brpoikkucfm3" path="res://Objects/assets/Icons/potion3.png" id="1_i5t3g"]
+[ext_resource type="Script" uid="uid://ctyjcwk8877l3" path="res://Objects/Scripts/item_data.gd" id="1_wos7v"]
+[ext_resource type="ArrayMesh" uid="uid://bocvsintkj5g0" path="res://Objects/assets/Models/Potions/GenericPotion.obj" id="2_tm5bm"]
+
+[resource]
+script = ExtResource("1_wos7v")
+item_name = "Potion 3"
+icon = ExtResource("1_i5t3g")
+mesh = ExtResource("2_tm5bm")
+metadata/_custom_type_script = "uid://ctyjcwk8877l3"

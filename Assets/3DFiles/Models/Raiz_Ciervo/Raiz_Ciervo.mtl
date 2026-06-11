@@ -1,0 +1,41 @@
+# Exported from Nomad Sculpt
+
+newmtl Quad_Sphere_1
+ map_Kd Flores_color.png
+ map_roughness Flores_roughness.png
+ map_Pr Flores_roughness.png
+ map_metallic Flores_metalness.png
+ map_Pm Flores_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Tube
+ map_Kd Ramas_color.png
+ map_roughness Ramas_roughness.png
+ map_Pr Ramas_roughness.png
+ map_metallic Ramas_metalness.png
+ map_Pm Ramas_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Tube_4
+ map_Kd Hojas_color.png
+ map_roughness Hojas_roughness.png
+ map_Pr Hojas_roughness.png
+ map_metallic Hojas_metalness.png
+ map_Pm Hojas_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
+
+newmtl Torus_3
+ map_Kd Cuerdas_color.png
+ map_roughness Cuerdas_roughness.png
+ map_Pr Cuerdas_roughness.png
+ map_metallic Cuerdas_metalness.png
+ map_Pm Cuerdas_metalness.png
+ Kd 1.000000 1.000000 1.000000
+ Pr 0.250000
+ Pm 0.000000
